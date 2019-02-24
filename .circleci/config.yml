@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: adamantium/flutter
+    steps:
+      - checkout
+      - run: flutter doctor && cd attendance_admin && flutter packages get && flutter test && flutter -v build apk --debug

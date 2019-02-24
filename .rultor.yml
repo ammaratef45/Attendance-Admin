@@ -1,0 +1,33 @@
+architect:
+  - ammaratef45
+docker:
+  as_root: true
+  image: adamantium/flutter
+
+install: |-
+  curl -sSL https://get.rvm.io | bash -s stable --ruby
+  source /usr/local/rvm/scripts/rvm
+  gem install pdd
+  gem install fastlane
+  
+decrypt:
+  repo/attendance_admin/android/api-project.json: "repo/attendance_admin/android/api-project.json.asc"
+  repo/attendance_admin/android/key.properties: "repo/attendance_admin/android/key.properties.asc"
+
+merge:
+  script: |-
+    flutter doctor
+    cd attendance_admin
+    flutter packages get
+    flutter test
+    flutter -v build apk
+    pdd -f /dev/null -v
+    
+deploy:
+  script: |-
+    flutter doctor
+    cd attendance_admin
+    flutter -v build apk
+    cd android
+    fastlane supply init
+    fastlane beta
