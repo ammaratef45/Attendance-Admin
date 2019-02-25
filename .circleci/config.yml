@@ -5,4 +5,4 @@ jobs:
       - image: adamantium/flutter:latest
     steps:
       - checkout
-      - run: flutter doctor && cd attendance_admin && flutter packages get && flutter test && flutter -v build apk --debug
+      - run: flutter doctor && cd attendance_admin && flutter packages get && flutter test
