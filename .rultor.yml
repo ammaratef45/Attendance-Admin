@@ -29,5 +29,4 @@ deploy:
     cd attendance_admin
     flutter -v build apk
     cd android
-    fastlane supply init
     fastlane beta
