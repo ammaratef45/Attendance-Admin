@@ -4,6 +4,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class HomePageViewModel extends State<HomePage> {
   final auth = FirebaseAuth.instance;
+  FirebaseUser mUser;
+  HomePageViewModel() {
+    auth.currentUser().then((user) {
+      mUser = user;
+    });
+  }
   void signOut() {
     auth.signOut();
     Navigator.of(context).pushReplacementNamed('/login');

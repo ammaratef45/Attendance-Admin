@@ -106,7 +106,17 @@ class HomePageView extends HomePageViewModel {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Drawer Header'),
+              child: Column(
+                children: <Widget>[
+                  new Image.network(
+                    mUser.photoUrl,
+                    width: 100.0,
+                    height: 100.0,
+                  ),
+                  new Text(mUser.displayName),
+                  new Text(mUser.email),
+                ],
+              ),
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),

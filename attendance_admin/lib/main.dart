@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './login_page/login_page.dart';
 import './home_page/home_page.dart';
-import './class_page.dart';
-import './session_page.dart';
+import './class_page/class_page.dart';
+import './session_page/session_page.dart';
 import './create_page.dart';
 void main() => runApp(new MyApp());
 

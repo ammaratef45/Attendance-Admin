@@ -1,9 +1,8 @@
-import 'dart:async';
-import 'package:flutter/material.dart';
+import './class_page_view_model.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import './model/session_model.dart';
-import './model/class_model.dart';
+import '../model/session_model.dart';
+import '../model/class_model.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/rendering.dart';
 import 'package:path_provider/path_provider.dart';
@@ -12,28 +11,21 @@ import 'dart:ui';
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'dart:async';
+import 'package:flutter/material.dart';
 
-class ClassPage extends StatefulWidget {
-  ClassPage({Key key}) : super(key: key);
-
-  @override
-  ClassPageState createState() => new ClassPageState();
-}
-
-class ClassPageState extends State<ClassPage> {
+class ClassPageView extends ClassPageViewModel {
   static String uid;
   GlobalKey globalKey = new GlobalKey();
   Map<String, dynamic> dataMap = {};
   String dataString="";
   String qrString = "";
-  static ClassPageState thisInstance;
+  static ClassPageView thisInstance;
   static DatabaseReference classesReference;
   List<SessionModel> litems = [];
   final dateFormat = DateFormat("EEEE, MMMM d, yyyy 'at' h:mma");
-  //final timeFormat = DateFormat("h:mm a");
   DateTime date;
-  //TimeOfDay time;
-  ClassPageState() {
+  ClassPageView() {
     thisInstance = this;
   }
   Future<void> captureAndSharePng(String val) async {
@@ -104,8 +96,7 @@ class ClassPageState extends State<ClassPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).pushNamed('/sessionadd');
-        }
-          /*_showDialog*/,
+        },
         tooltip: 'Add Session',
         child: Icon(Icons.add),
         elevation: 2.0,
