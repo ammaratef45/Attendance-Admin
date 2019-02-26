@@ -22,11 +22,9 @@ class HomePageView extends HomePageViewModel {
   }
   void _showDialog() {
     TextEditingController nameController = new TextEditingController();
-    // flutter defined function
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        // return object of type Dialog
         return AlertDialog(
           title: new Text("Add new class"),
           content: new Container(
@@ -109,12 +107,12 @@ class HomePageView extends HomePageViewModel {
               child: Column(
                 children: <Widget>[
                   new Image.network(
-                    mUser.photoUrl,
+                    imageUrl,
                     width: 100.0,
                     height: 100.0,
                   ),
-                  new Text(mUser.displayName),
-                  new Text(mUser.email),
+                  new Text(name),
+                  new Text(mail),
                 ],
               ),
               decoration: BoxDecoration(
