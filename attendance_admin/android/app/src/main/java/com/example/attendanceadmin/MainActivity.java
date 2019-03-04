@@ -24,6 +24,9 @@ public class MainActivity extends FlutterActivity {
         if (methodCall.method.equals("shareFile")) {
           shareFile((String) methodCall.arguments);
         }
+        if (methodCall.method.equals("shareCSV")) {
+          shareCSV((String) methodCall.arguments);
+        }
       }
     });
   }
@@ -36,4 +39,14 @@ public class MainActivity extends FlutterActivity {
     shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
     this.startActivity(Intent.createChooser(shareIntent, "Share image using"));
   }
+  private void shareCSV(String path) {
+    File csvFile = new File(this.getApplicationContext().getCacheDir(), path);
+    Uri contentUri = FileProvider.getUriForFile(this, "me.ammar.share", csvFile);
+    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+    shareIntent.setType("text/*");
+
+    shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri);
+    this.startActivity(Intent.createChooser(shareIntent, "Share CSV using"));
+  }
+
 }
