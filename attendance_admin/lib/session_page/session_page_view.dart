@@ -43,7 +43,7 @@ class SessionPageView extends SessionPageViewModel {
             decoration: BoxDecoration(color: Colors.blue),
             alignment: Alignment(0, 0),
             child: Text(
-              litems[index].name,
+              litems[index].name==null?"Name Not Found": litems[index].name,
               style: TextStyle(
                 fontSize: 20.0,
                 color: Colors.white
