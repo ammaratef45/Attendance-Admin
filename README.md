@@ -36,6 +36,10 @@ You can use docker image ammaratef45/flutter:latest
 - `curl -sSL https://get.rvm.io | bash -s stable --ruby`
 - `gem install pdd`
 
+## Fingerprint
+To be able to use our firebase auth service, we must allow you.
+Run `keytool -exportcert -alias your-key-name -keystore /path/to/your/keystore/file -list -v` and send me the SHA-1
+
 ## contribution
 - Make a fork.
 - Pick an issue you want to solve, or implement a feature.
