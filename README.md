@@ -1,4 +1,8 @@
-[![DevOps By Rultor.com](http://www.rultor.com/b/yegor256/rultor)](http://www.rultor.com/p/yegor256/rultor)
+[![Managed by Zerocrat](https://www.0crat.com/badge/CH951175M.svg)](https://www.0crat.com/p/CH951175M)
+[![Donate via Zerocracy](https://www.0crat.com/contrib-badge/CH951175M.svg)](https://www.0crat.com/contrib/CH951175M)
+[![DevOps By Rultor.com](http://www.rultor.com/b/ammaratef45/Attendance-Admin)](http://www.rultor.com/p/ammaratef45/Attendance-Admin)
+
+[![PDD status](http://www.0pdd.com/svg?name=ammaratef45/Attendance-Admin)](http://www.0pdd.com/p?name=ammaratef45/Attendance-Admin)
 [![CircleCI](https://circleci.com/gh/ammaratef45/Attendance-Admin/tree/master.svg?style=svg)](https://circleci.com/gh/ammaratef45/Attendance-Admin/tree/master)
 # Attendance-Admin
 Hello! 
