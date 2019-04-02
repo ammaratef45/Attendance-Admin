@@ -4,6 +4,7 @@
 
 [![PDD status](http://www.0pdd.com/svg?name=ammaratef45/Attendance-Admin)](http://www.0pdd.com/p?name=ammaratef45/Attendance-Admin)
 [![CircleCI](https://circleci.com/gh/ammaratef45/Attendance-Admin/tree/master.svg?style=svg)](https://circleci.com/gh/ammaratef45/Attendance-Admin/tree/master)
+[![Codemagic build status](https://api.codemagic.io/apps/5ca3284260ef82001d551eca/5ca3284260ef82001d551ec9/status_badge.svg)](https://codemagic.io/apps/5ca3284260ef82001d551eca/5ca3284260ef82001d551ec9/latest_build)
 # Attendance-Admin
 Hello! 
 We are pleased to share the QR-Attendance source code of the Admin version. The Admin version is designed for users whose job is meant to manage the attendance of a group of persons to a lecture meeting or any similar professional and non-professional gatherings. The App provides an environment that manges its users from creating profiles for their lectures or meetings each one characterized by a QR code that can be shared with the students or the meeting attendees to register their attendance via the user version of the App installed on their mobile phones.
